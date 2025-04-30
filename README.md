@@ -1,12 +1,51 @@
-# React + Vite
+# 🍰 Mama Kugler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cozy recipe web app created with **React**, **Firebase**, and lots of love.  
+The project is inspired by home-style cooking, with a soft color palette and a responsive, RTL-friendly design.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Category-based recipe navigation
+- Search by recipe name or ingredient
+- Audio explanations
+- RTL support (Hebrew)
+- Smooth page transitions
+- Responsive layout
+- Sticky header & footer
+- Print and PDF export (upcoming)
+- Toast messages (upcoming)
+- Admin upload (future feature)
 
-## Expanding the ESLint configuration
+## 📦 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React + Vite
+- **Database**: Firebase Firestore
+- **State & Routing**: useState, useEffect, React Router
+- **Styling**: CSS Modules + CSS Variables
+- **Internationalization (i18n)**: react-i18next
+- **Animation**: react-transition-group
+
+## 🔖 Project Structure
+
+src/ ├── assets/ ├── components/ ├── firebase/ ├── locales/ ├── pages/ ├── App.jsx ├── main.jsx └── i18n.js
+
+
+## 🚀 Getting Started
+
+1. Clone the repo  
+2. Run `npm install`  
+3. Start the app with `npm run dev`  
+
+Make sure to configure your Firebase credentials in `firebase.js`.
+
+## ✍️ License
+
+MIT — feel free to use, modify, and learn!
+
+---
+
+### ✨ About the Name
+
+Mama Kugler is a tribute to warm, loving homemade food.  
+Because every recipe has a story. ❤️
+
