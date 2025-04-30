@@ -1,0 +1,27 @@
+{
+  "welcome_message": "ברוכים הבאים למאמא קוגלר 💗",
+  "search": {
+    "placeholder": "חפש מתכון או מרכיב...",
+    "button": "חפש"
+  },
+  "search_results": {
+    "title": "תוצאות חיפוש עבור",
+    "no_results": "לא נמצאו מתכונים מתאימים."
+  },
+  "categories": {
+    "cakes": "עוגות",
+    "cookies": "עוגיות",
+    "breads": "מאפים",
+    "salads": "סלטים"
+  },
+  "recipe": {
+    "ingredients": "מצרכים:",
+    "audio_explanation": "הסבר קולי:",
+    "instructions": "אופן ההכנה"
+  },
+  "messages": {
+    "no_recipes_in_category": "אין מתכונים זמינים בקטגוריה זו.",
+    "loading_recipe": "טוען מתכון..."
+  }
+}
+  

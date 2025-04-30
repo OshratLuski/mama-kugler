@@ -1,0 +1,30 @@
+/* === Basic Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Default HTML and Body Styles === */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Varela Round', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #CED9B8;
+  color: #735340;
+  direction: rtl;
+}
+
+/* === Links (Default Styling for <a> tags) === */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === Basic Button Styles (Before Customization) === */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}

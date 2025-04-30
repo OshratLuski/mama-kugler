@@ -1,0 +1,20 @@
+import i18n from 'i18next';
+import {initReactI18next} from 'react-i18next';
+
+import translationHe from './locales/he/translation.json';
+
+const resources = {
+    he: {
+        translation: translationHe
+    }
+};
+
+i18n.use(initReactI18next).init({
+    resources,
+    lng: "he",
+    interpolation: {
+        escapeValue: false
+    }
+});
+
+export default i18n;
