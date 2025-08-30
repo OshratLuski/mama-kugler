@@ -7,7 +7,7 @@ GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
 REPO = os.environ["REPO"]
 PR_NUMBER = os.environ["PR_NUMBER"]
 AWS_REGION = os.environ.get("AWS_REGION", "us-west-2")
-MODEL_ID = os.environ.get("ANTHROPIC_MODEL_ID", "anthropic.claude-3-7-sonnet-20250219-v1:0")
+MODEL_ID = os.environ.get("ANTHROPIC_MODEL_ID", "anthropic.claude-3-sonnet-20240229-v1:0")
 MAX_TOKENS = int(os.environ.get("MAX_TOKENS", "4000"))
 
 GH_API = "https://api.github.com"
