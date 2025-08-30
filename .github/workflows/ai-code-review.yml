@@ -40,7 +40,7 @@ jobs:
           REPO: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           AWS_REGION: us-west-2
-          ANTHROPIC_MODEL_ID: anthropic.claude-3-7-sonnet-20250219-v1:0
+          ANTHROPIC_MODEL_ID: anthropic.claude-3-sonnet-20240229-v1:0          
           MAX_TOKENS: "4000"
         run: |
           python .github/scripts/ai_code_review.py --emit-verdict > verdict.txt
