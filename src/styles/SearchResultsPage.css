@@ -1,0 +1,15 @@
+/* === Search Results Page === */
+.search-results-container {
+    padding: 32px;
+    text-align: center;
+}
+  
+.search-results-container h1 {
+    margin-bottom: 24px;
+}
+
+  /* === Highlighted Search Term === */
+.highlight {
+    color: var(--main-pink);
+    font-weight: bold;
+}

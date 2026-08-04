@@ -72,35 +72,30 @@ def create_or_update_comment(body: str):
 # ---------- Bedrock (Anthropic Messages) ----------
 bedrock = boto3.client("bedrock-runtime", region_name=AWS_REGION)
 
-SYSTEM_PROMPT = """You are a rigorous senior software engineer performing code review on a Pull Request.
-Focus on: correctness, security, performance, maintainability, readability, and tests.
-Be concise but specific. Provide actionable suggestions and short examples.
-Never leak secrets. If you detect keys/tokens, flag them clearly.
-Prefer language-idiomatic recommendations. Return Markdown with clear headings and bullet points.
-When a change is OK, say so briefly.
+SYSTEM_PROMPT = """You are a senior Moodle developer assigned to review Moodle plugin code.
+Assume this plugin targets Moodle 4.x and follows the standard plugin directory structure.
+Provide your review in clear Markdown, with headings and bullet points.
+Do not output generic advice — always ground feedback in Moodle-specific standards.
 """
 
-USER_PREFIX = """PR metadata:
-- Repository: {repo}
-- PR #: {pr}
+USER_PREFIX = """Review the following plugin diff for PR {pr} in repository {repo}.
+Focus your feedback on these areas:
+- Adherence to Moodle coding style standards (PSR-12 and Moodle frankenstyle).
+- Plugin metadata correctness in version.php (version, maturity, component, dependencies).
+- Security: input validation, context checks, CSRF tokens, XSS/SQL injection prevention.
+- Core API usage: Access API, Data Manipulation API, Output API, Form API, File API.
+- Internationalization: use of get_string() and complete language pack entries.
+- Accessibility: semantic HTML, ARIA roles, properly labeled forms.
+- Documentation: PHPDoc blocks, README, help files, inline comments.
+- Testing: PHPUnit test coverage and manual testing instructions.
+- Performance: SQL query optimization, caching strategies, batch operations.
+- Code organization: modular classes, namespaces, correct plugin directory layout.
 
-Review the following unified diffs. For each file:
-- List concrete issues (if any) with short rationale.
-- Security: note any input validation, XSS/SQLi, SSRF, deserialization, path traversal or secrets.
-- Performance: obvious hot paths, N+1, unnecessary I/O.
-- PHP/Moodle conventions (if relevant): coding style, API usage, globals, DB access, capability checks, xss-safe output.
-- Provide quick-fix snippets where appropriate.
-- Tests: suggest focused tests.
-
-Return in **Markdown**, under these headings:
-1. Summary
-2. File-by-file notes
-3. Security & Privacy
-4. Performance
-5. Tests
-6. Overall verdict (approve / request changes / comment)
+When reviewing, reference specific file paths and code snippets, cite Moodle standards or docs where applicable, and suggest concrete improvements.
 
 Diff chunk:
+
+{diff}
 
 """
 
@@ -186,6 +181,21 @@ def main():
 
     files = get_changed_files()
     debug(f"files count from GitHub API: {len(files)}")
+
+    theme_warnings = []
+    for f in files:
+        filename = f.get("filename", "")
+        if filename.startswith("theme/") and not filename.startswith("theme/petel"):
+            theme_warnings.append(f"- {filename}")
+
+    if theme_warnings:
+        warning_text = (
+            "⚠️ **Notice:** Changes detected in theme directories outside of `theme/petel`.\n\n"
+            "The following files were modified:\n"
+            + "\n".join(theme_warnings) +
+            "\n\nPlease avoid editing themes other than `theme/petel`."
+        )
+        create_or_update_comment(warning_text)
 
     if not files:
         out = "No changed files detected."

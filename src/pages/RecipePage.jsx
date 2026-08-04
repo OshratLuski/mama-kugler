@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { db } from '../firebase/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { useTranslation } from 'react-i18next';
+import '../styles/RecipePage.css'
 
 export default function RecipePage() {
   const { recipeId } = useParams();

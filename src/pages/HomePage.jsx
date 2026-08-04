@@ -1,18 +1,13 @@
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { useState } from 'react';
+import '../styles/HomePage.css'
+import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useState } from 'react'
 
 export default function HomePage() {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const categories = t('categories', { returnObjects: true });
   const [searchTerm, setSearchTerm] = useState('');
-
-  const categories = [
-    { key: "cakes" },
-    { key: "cookies" },
-    { key: "breads" },
-    { key: "salads" }
-  ];
 
   const handleCategoryClick = (categoryKey) => {
     navigate(`/category/${categoryKey}`);
@@ -47,13 +42,13 @@ export default function HomePage() {
       </div>
 
       <div className="category-buttons">
-        {categories.map((category, index) => (
+      {Object.entries(categories).map(([key, label]) => (
           <button
-            key={index}
-            onClick={() => handleCategoryClick(category.key)}
+            key={key}
+            onClick={() => handleCategoryClick(key)}
             className="category-button"
           >
-            {t(`categories.${category.key}`)}
+            {label}
           </button>
         ))}
       </div>

@@ -1,0 +1,60 @@
+/* === Home Page === */
+.home-container {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .category-buttons {
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  /* === Category Buttons === */
+  .category-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    cursor: pointer;
+    background-color: var(--main-pink);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .category-button:hover {
+    background-color: var(--alert-orange);
+    transform: scale(1.05);
+  }
+
+  /* === Search Area === */
+.search-container {
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .search-input {
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--neutral-border);
+    width: 250px;
+  }
+  
+  .search-button {
+    padding: 10px 24px;
+    font-size: 16px;
+    background-color: var(--main-pink);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: var(--alert-orange);
+  }

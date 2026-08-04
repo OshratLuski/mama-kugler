@@ -1,8 +1,8 @@
 {
   "welcome_message": "ברוכים הבאים למאמא קוגלר 💗",
   "search": {
-    "placeholder": "חפש מתכון או מרכיב...",
-    "button": "חפש"
+    "placeholder": "חיפוש מתכון או מרכיב...",
+    "button": "חיפוש"
   },
   "search_results": {
     "title": "תוצאות חיפוש עבור",
@@ -12,7 +12,11 @@
     "cakes": "עוגות",
     "cookies": "עוגיות",
     "breads": "מאפים",
-    "salads": "סלטים"
+    "salads": "סלטים",
+    "soupes": "מרקים",
+    "holidays": "חגים",
+    "midi": "צהריים",
+    "tartes": "פשטידות"
   },
   "recipe": {
     "ingredients": "מצרכים:",
@@ -21,7 +25,26 @@
   },
   "messages": {
     "no_recipes_in_category": "אין מתכונים זמינים בקטגוריה זו.",
-    "loading_recipe": "טוען מתכון..."
+    "loading_recipe": "טוען מתכון...",
+    "recipe_updated": "המתכון עודכן בהצלחה!",
+    "recipe_deleted": "המתכון נמחק בהצלחה!"
+  },
+  "addRecipe": {
+    "title": "הוספת מתכון חדש",
+    "nameLabel": "שם המתכון:",
+    "categoryLabel": "קטגוריה:",
+    "add": "הוסף",
+    "imageLabel": "קישור לתמונה (אופציונלי):",
+    "audioLabel": "קישור לאודיו (אופציונלי):",
+    "submitButton": "שמור מתכון",
+    "success": "המתכון נוסף בהצלחה!",
+    "error": "אירעה שגיאה בהוספת המתכון!"
+  },
+  "admin": {
+    "addRecipe": "➕ הוספת מתכון חדש",
+    "editRecipe": "✏️ עריכת מתכון קיים",
+    "deleteRecipe": "🗑️ מחיקת מתכון",
+    "cancelButton": "ביטול"
   }
 }
   

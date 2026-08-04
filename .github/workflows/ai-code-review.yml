@@ -4,6 +4,21 @@ on:
   pull_request:
     types: [opened, reopened, synchronize, ready_for_review]
     branches: [ "**" ]
+    paths:
+      - '**/*.php'
+      - '**/*.js'
+      - '**/*.ts'
+      - '**/*.tsx'
+      - '**/*.py'
+      - '**/*.jsx'
+      - '**/*.scss'
+      - '**/*.css'
+      - '**/*.mustache'
+      - '**/*.html'
+      - '**/*.md'
+      - '!**/*.min.js'
+      - '!**/*.map'
+      - '!**/*.{png,jpg,jpeg,gif,svg,webp,mp4,mp3,woff,woff2}'
 
 permissions:
   contents: read
