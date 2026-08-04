@@ -1,8 +1,9 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { db } from '../firebase/firebase';
-import { collection, query, where, getDocs } from 'firebase/firestore';
-import { useTranslation } from 'react-i18next';
+import { useParams, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { db } from '../firebase/firebase'
+import { collection, query, where, getDocs } from 'firebase/firestore'
+import { useTranslation } from 'react-i18next'
+import '../styles/CategoryPage.css'
 
 export default function CategoryPage() {
   const { categoryName } = useParams();

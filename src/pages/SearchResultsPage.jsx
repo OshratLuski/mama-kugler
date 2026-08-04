@@ -1,8 +1,10 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { db } from '../firebase/firebase';
-import { collection, getDocs } from 'firebase/firestore';
-import { useTranslation } from 'react-i18next';
+import { useParams, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { db } from '../firebase/firebase'
+import { collection, getDocs } from 'firebase/firestore'
+import { useTranslation } from 'react-i18next'
+import '../styles/SearchResultsPage.css'
+import '../styles/CategoryPage.css'
 
 export default function SearchResultsPage() {
   const { searchTerm } = useParams();

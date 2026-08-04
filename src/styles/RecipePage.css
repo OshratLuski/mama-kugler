@@ -1,0 +1,62 @@
+/* === Recipe Detail Page === */
+.recipe-detail-container {
+    padding: 32px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .recipe-title {
+    font-size: 36px;
+    margin-bottom: 24px;
+    color: var(--main-pink);
+  }
+  
+  .recipe-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .ingredients-section {
+    text-align: right;
+    margin-bottom: 24px;
+  }
+  
+  .ingredients-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .ingredient-item {
+    margin: 8px 0;
+    font-size: 18px;
+  }
+  
+  .instructions-section {
+    text-align: right;
+    margin-top: 32px;
+  }
+  
+  .instructions-list {
+    list-style: decimal;
+    padding-right: 20px;
+  }
+  
+  .instruction-item {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: var(--choco-brown);
+  }
+  
+  .audio-section {
+    margin-top: 32px;
+  }
+  
+  .recipe-audio {
+    width: 100%;
+  }

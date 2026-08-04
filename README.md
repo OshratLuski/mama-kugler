@@ -49,3 +49,6 @@ MIT — feel free to use, modify, and learn!
 Mama Kugler is a tribute to warm, loving homemade food.  
 Because every recipe has a story. ❤️
 
+## Test AI Review
+This line is only for testing the AI code review workflow.
+

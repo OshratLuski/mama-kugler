@@ -1,0 +1,76 @@
+.add-recipe-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: right;
+  }
+  
+  .add-recipe-form h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--choco-brown);
+  }
+  
+  .add-recipe-form label {
+    display: block;
+    margin-top: 16px;
+    font-weight: bold;
+    color: var(--choco-brown);
+  }
+  
+  .add-recipe-form input,
+  .add-recipe-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .add-recipe-form button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    background-color: var(--main-pink);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-recipe-form button:hover {
+    background-color: var(--main-pink);
+  }
+  
+  .add-recipe-form ul,
+  .add-recipe-form ol {
+    margin-top: 8px;
+    padding-right: 20px;
+    color: var(--choco-brown);
+  }
+  
+  .add-recipe-form li {
+    line-height: 1.6;
+  }
+  
+  .cancel-button {
+    background-color: var(--warm-beige);
+    color: var(--choco-brown);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background-color: var(--soft-green);
+  }
+  

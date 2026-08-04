@@ -5,6 +5,7 @@ import CategoryPage from './pages/CategoryPage';
 import RecipePage from './pages/RecipePage';
 import PageWrapper from './components/PageWrapper';
 import SearchResultsPage from './pages/SearchResultsPage';
+import AdminPage from './pages/AdminPage';
 import logo from './assets/logo.png';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/category/:categoryName" element={<PageWrapper><CategoryPage /></PageWrapper>} />
             <Route path="/recipe/:recipeId" element={<PageWrapper><RecipePage /></PageWrapper>} />
             <Route path="/search/:searchTerm" element={<PageWrapper><SearchResultsPage /></PageWrapper>} />
+            <Route path="/admin" element={<AdminPage />} />
           </Routes>
         </main>
       </AnimatePresence>
